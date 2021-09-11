@@ -1,0 +1,1347 @@
+{
+	"info": {
+		"_postman_id": "359a2b8c-ae92-4c0f-a8d3-2c84ba51fdc4",
+		"name": "ChatBot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "{{token_chatbot}}",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						},
+						{
+							"key": "cpfcnpj",
+							"value": "228.745.500-00",
+							"description": "Busca do Cliente por CPF/CNPJ",
+							"type": "text"
+						},
+						{
+							"key": "idCliente",
+							"value": "15678",
+							"description": "Busca do Cliente por idCliente",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "18997143993",
+							"description": "Bsuca do Cliente por Telefone",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.local/api/novo/chatbot/clientes",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"local"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"clientes"
+					]
+				},
+				"description": "Busta de Clientes por CPF/CNPJ, Telefone ou idCliente."
+			},
+			"response": [
+				{
+					"name": "Clientes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								},
+								{
+									"key": "cpfcnpj",
+									"value": "191.823.749-29",
+									"description": "Busca do Cliente por CPF/CNPJ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "idCliente",
+									"value": "15678",
+									"description": "Busca do Cliente por idCliente",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "18997143993",
+									"description": "Bsuca do Cliente por Telefone",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/clientes",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"clientes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:18:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "387"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"msg\": \"Contrato Localizado\",\n    \"contratos\": {\n        \"idCliente\": 15678,\n        \"razaoSocial\": \"CLIENTE TESTE\",\n        \"contratoStatusDisplay\": \"Ativo\",\n        \"isPromessaPagamento\": false,\n        \"contratoValorAberto\": 50,\n        \"faturasEmAberto\": [\n            {\n                \"valor\": 50,\n                \"vencimento\": \"2050-09-29\",\n                \"url\": \"https://b.receitanet.net/g8ty\",\n                \"vencido\": false\n            }\n        ],\n        \"email\": \"leandro@receitanet.net\",\n        \"cpfCnpj\": \"19182374929\",\n        \"contratoStatus\": 1,\n        \"existeChamado\": 0,\n        \"isChamados\": {\n            \"1\": 0,\n            \"2\": 0,\n            \"4\": 0,\n            \"5\": 0\n        },\n        \"clienteLiberadoConfianca\": 0,\n        \"usouLiberacaoConfianca\": 0,\n        \"logins\": [\n            {\n                \"login\": \"leandrose\",\n                \"senha\": \"123\",\n                \"isPrincipal\": true\n            }\n        ],\n        \"planos\": [],\n        \"tecnologia\": 1\n    }\n}"
+				},
+				{
+					"name": "Clientes Não Encontrado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								},
+								{
+									"key": "cpfcnpj",
+									"value": "191.823.749-29",
+									"description": "Busca do Cliente por CPF/CNPJ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "idCliente",
+									"value": "15679",
+									"description": "Busca do Cliente por idCliente",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "18997143993",
+									"description": "Bsuca do Cliente por Telefone",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/clientes",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"clientes"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:23:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"msg\": \"Cliente não localizado.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Enviar Boletos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						},
+						{
+							"key": "idCliente",
+							"value": "15678",
+							"description": "Id do Cliente (idCliente)",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "email",
+							"description": "Tipo de envio por email",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "sms",
+							"description": "Tipo de envio por sms",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "contato",
+							"value": "18999998888",
+							"description": "Número do contato",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.net/api/novo/chatbot/boletos",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"net"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"boletos"
+					]
+				},
+				"description": "Requisitar envios do boleto por Email ou SMS."
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar Acesso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						},
+						{
+							"key": "idCliente",
+							"value": "15678",
+							"description": "ID do Cliente (idCliente)",
+							"type": "text"
+						},
+						{
+							"key": "contato",
+							"value": "18999998888",
+							"description": "Número do contato",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.net/api/novo/chatbot/verificar-acesso",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"net"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"verificar-acesso"
+					]
+				},
+				"description": "Verificar se o Cliente esta ONLINE ou OFFLINE."
+			},
+			"response": [
+				{
+					"name": "Verificar Acesso - Cliente ou Servidor não Localizada",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								},
+								{
+									"key": "idCliente",
+									"value": "15678",
+									"description": "ID do Cliente (idCliente)",
+									"type": "text"
+								},
+								{
+									"key": "contato",
+									"value": "18999998888",
+									"description": "Número do contato",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/verificar-acesso",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"verificar-acesso"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:28:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "<!doctype html><html lang=\"en\"><head><title>Page Not Found</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n<!-- Fonts -->\n<link rel=\"dns-prefetch\" href=\"//fonts.gstatic.com\">\n<link href=\"https://fonts.googleapis.com/css?family=Nunito\" rel=\"stylesheet\" type=\"text/css\">\n<!-- Styles -->\n<style>\n        html {\n            line-height: 1.15;\n                -ms-text-size-adjust: 100%;\n            -webkit-text-size-adjust: 100%;\n        }\n\n        body {\n            margin: 0;\n        }\n\n        header,\n        nav,\n        section {\n            display: block;\n        }\n\n        figcaption,\n        main {\n            display: block;\n        }\n\n        a {\n            background-color: transparent;\n            -webkit-text-decoration-skip: objects;\n        }\n\n        strong {\n            font-weight: inherit;\n        }\n\n        strong {\n            font-weight: bolder;\n        }\n\n        code {\n            font-family: monospace, monospace;\n            font-size: 1em;\n        }\n\n        dfn {\n            font-style: italic;\n        }\n\n        svg:not(:root) {\n            overflow: hidden;\n        }\n\n        button,\n        input {\n            font-family: sans-serif;\n            font-size: 100%;\n            line-height: 1.15;\n            margin: 0;\n        }\n\n        button,\n        input {\n            overflow: visible;\n        }\n\n        button {\n            text-transform: none;\n        }\n\n        button,\n        html [type=\"button\"],\n        [type=\"reset\"],\n        [type=\"submit\"] {\n            -webkit-appearance: button;\n        }\n\n        button::-moz-focus-inner,\n        [type=\"button\"]::-moz-focus-inner,\n        [type=\"reset\"]::-moz-focus-inner,\n        [type=\"submit\"]::-moz-focus-inner {\n            border-style: none;\n            padding: 0;\n        }\n\n        button:-moz-focusring,\n        [type=\"button\"]:-moz-focusring,\n        [type=\"reset\"]:-moz-focusring,\n        [type=\"submit\"]:-moz-focusring {\n            outline: 1px dotted ButtonText;\n        }\n\n        legend {\n            -webkit-box-sizing: border-box;\n                    box-sizing: border-box;\n            color: inherit;\n            display: table;\n            max-width: 100%;\n            padding: 0;\n            white-space: normal;\n        }\n\n        [type=\"checkbox\"],\n        [type=\"radio\"] {\n            -webkit-box-sizing: border-box;\n                    box-sizing: border-box;\n            padding: 0;\n        }\n\n        [type=\"number\"]::-webkit-inner-spin-button,\n        [type=\"number\"]::-webkit-outer-spin-button {\n            height: auto;\n        }\n\n        [type=\"search\"] {\n            -webkit-appearance: textfield;\n            outline-offset: -2px;\n        }\n\n        [type=\"search\"]::-webkit-search-cancel-button,\n        [type=\"search\"]::-webkit-search-decoration {\n            -webkit-appearance: none;\n        }\n\n        ::-webkit-file-upload-button {\n            -webkit-appearance: button;\n            font: inherit;\n        }\n\n        menu {\n            display: block;\n        }\n\n        canvas {\n            display: inline-block;\n        }\n\n        template {\n            display: none;\n        }\n\n        [hidden] {\n            display: none;\n        }\n\n        html {\n            -webkit-box-sizing: border-box;\n                    box-sizing: border-box;\n            font-family: sans-serif;\n        }\n\n        *,\n        *::before,\n        *::after {\n            -webkit-box-sizing: inherit;\n                    box-sizing: inherit;\n        }\n\n        p {\n            margin: 0;\n        }\n\n        button {\n            background: transparent;\n            padding: 0;\n        }\n\n        button:focus {\n            outline: 1px dotted;\n            outline: 5px auto -webkit-focus-ring-color;\n        }\n\n        *,\n        *::before,\n        *::after {\n            border-width: 0;\n            border-style: solid;\n            border-color: #dae1e7;\n        }\n\n        button,\n        [type=\"button\"],\n        [type=\"reset\"],\n        [type=\"submit\"] {\n            border-radius: 0;\n        }\n\n        button,\n        input {\n            font-family: inherit;\n        }\n\n        input::-webkit-input-placeholder {\n            color: inherit;\n            opacity: .5;\n        }\n\n        input:-ms-input-placeholder {\n            color: inherit;\n            opacity: .5;\n        }\n\n        input::-ms-input-placeholder {\n            color: inherit;\n            opacity: .5;\n        }\n\n        input::placeholder {\n            color: inherit;\n            opacity: .5;\n        }\n\n        button,\n        [role=button] {\n            cursor: pointer;\n        }\n\n        .bg-transparent {\n            background-color: transparent;\n        }\n\n        .bg-white {\n            background-color: #fff;\n        }\n\n        .bg-teal-light {\n            background-color: #64d5ca;\n        }\n\n        .bg-blue-dark {\n            background-color: #2779bd;\n        }\n\n        .bg-indigo-light {\n            background-color: #7886d7;\n        }\n\n        .bg-purple-light {\n            background-color: #a779e9;\n        }\n\n        .bg-no-repeat {\n            background-repeat: no-repeat;\n        }\n\n        .bg-cover {\n            background-size: cover;\n        }\n\n        .border-grey-light {\n            border-color: #dae1e7;\n        }\n\n        .hover\\:border-grey:hover {\n            border-color: #b8c2cc;\n        }\n\n        .rounded-lg {\n            border-radius: .5rem;\n        }\n\n        .border-2 {\n            border-width: 2px;\n        }\n\n        .hidden {\n            display: none;\n        }\n\n        .flex {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n        }\n\n        .items-center {\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n        }\n\n        .justify-center {\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n        }\n\n        .font-sans {\n            font-family: Nunito, sans-serif;\n        }\n\n        .font-light {\n            font-weight: 300;\n        }\n\n        .font-bold {\n            font-weight: 700;\n        }\n\n        .font-black {\n            font-weight: 900;\n        }\n\n        .h-1 {\n            height: .25rem;\n        }\n\n        .leading-normal {\n            line-height: 1.5;\n        }\n\n        .m-8 {\n            margin: 2rem;\n        }\n\n        .my-3 {\n            margin-top: .75rem;\n            margin-bottom: .75rem;\n        }\n\n        .mb-8 {\n            margin-bottom: 2rem;\n        }\n\n        .max-w-sm {\n            max-width: 30rem;\n        }\n\n        .min-h-screen {\n            min-height: 100vh;\n        }\n\n        .py-3 {\n            padding-top: .75rem;\n            padding-bottom: .75rem;\n        }\n\n        .px-6 {\n            padding-left: 1.5rem;\n            padding-right: 1.5rem;\n        }\n\n        .pb-full {\n            padding-bottom: 100%;\n        }\n\n        .absolute {\n            position: absolute;\n        }\n\n        .relative {\n            position: relative;\n        }\n\n        .pin {\n            top: 0;\n            right: 0;\n            bottom: 0;\n            left: 0;\n        }\n\n        .text-black {\n            color: #22292f;\n        }\n\n        .text-grey-darkest {\n            color: #3d4852;\n        }\n\n        .text-grey-darker {\n            color: #606f7b;\n        }\n\n        .text-2xl {\n            font-size: 1.5rem;\n        }\n\n        .text-5xl {\n            font-size: 3rem;\n        }\n\n        .uppercase {\n            text-transform: uppercase;\n        }\n\n        .antialiased {\n            -webkit-font-smoothing: antialiased;\n            -moz-osx-font-smoothing: grayscale;\n        }\n\n        .tracking-wide {\n            letter-spacing: .05em;\n        }\n\n        .w-16 {\n            width: 4rem;\n        }\n\n        .w-full {\n            width: 100%;\n        }\n\n        @media (min-width: 768px) {\n            .md\\:bg-left {\n                background-position: left;\n            }\n\n            .md\\:bg-right {\n                background-position: right;\n            }\n\n            .md\\:flex {\n                display: -webkit-box;\n                display: -ms-flexbox;\n                display: flex;\n            }\n\n            .md\\:my-6 {\n                margin-top: 1.5rem;\n                margin-bottom: 1.5rem;\n            }\n\n            .md\\:min-h-screen {\n                min-height: 100vh;\n            }\n\n            .md\\:pb-0 {\n                padding-bottom: 0;\n            }\n\n            .md\\:text-3xl {\n                font-size: 1.875rem;\n            }\n\n            .md\\:text-15xl {\n                font-size: 9rem;\n            }\n\n            .md\\:w-1\\/2 {\n                width: 50%;\n            }\n        }\n\n        @media (min-width: 992px) {\n            .lg\\:bg-center {\n                background-position: center;\n            }\n        }\n        </style>\n</head>\n<body class=\"antialiased font-sans\">\n    <div class=\"md:flex min-h-screen\">\n        <div class=\"w-full md:w-1/2 bg-white flex items-center justify-center\">\n            <div class=\"max-w-sm m-8\">\n                <div class=\"text-black text-5xl md:text-15xl font-black\">\n                        404                    </div>\n                <div class=\"w-16 h-1 bg-purple-light my-3 md:my-6\"></div>\n                <p class=\"text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal\">\n                        Sorry, the page you are looking for could not be found.                    </p>\n                <a href=\"https://sistema.receitanet.net\">\n                    <button class=\"bg-transparent text-grey-darkest font-bold uppercase tracking-wide py-3 px-6 border-2 border-grey-light hover:border-grey rounded-lg\">\n                            Go Home\n                        </button>\n                </a>\n            </div>\n        </div>\n        <div class=\"relative pb-full md:flex md:pb-0 md:min-h-screen w-full md:w-1/2\">\n            <div style=\"background-image: url(https://sistema.receitanet.net/svg/404.svg);\" class=\"absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center\">\n    </div>\n        </div>\n    </div>\n</body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Notificação Pagamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						},
+						{
+							"key": "idCliente",
+							"value": "15678",
+							"description": "ID do Cliente (idCliente)",
+							"type": "text"
+						},
+						{
+							"key": "contato",
+							"value": "18999998888",
+							"description": "Número de Contato",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.net/api/novo/chatbot/notificacao-pagamento",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"net"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"notificacao-pagamento"
+					]
+				},
+				"description": "Notificar Pagamento Realizado."
+			},
+			"response": [
+				{
+					"name": "Notificação Pagamento - Excedida",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								},
+								{
+									"key": "idCliente",
+									"value": "15678",
+									"description": "ID do Cliente (idCliente)",
+									"type": "text"
+								},
+								{
+									"key": "contato",
+									"value": "18999998888",
+									"description": "Número de Contato",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/notificacao-pagamento",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"notificacao-pagamento"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:25:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "234"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 2,\n    \"idCliente\": 15678,\n    \"liberado\": false,\n    \"razaoSocial\": \"CLIENTE TESTE\",\n    \"cpfCnpj\": \"191.823.749-29\",\n    \"msg\": \"O uso da notificação de pagamento foi excedida\",\n    \"contato\": \"18999998888\",\n    \"protocolo\": \"20191014122553\",\n    \"status\": 2\n}"
+				},
+				{
+					"name": "Notificação Pagamento - Erro na Liberação",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								},
+								{
+									"key": "idCliente",
+									"value": "15678",
+									"description": "ID do Cliente (idCliente)",
+									"type": "text"
+								},
+								{
+									"key": "contato",
+									"value": "18999998888",
+									"description": "Número de Contato",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/notificacao-pagamento",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"notificacao-pagamento"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:27:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "216"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 0,\n    \"idCliente\": 15678,\n    \"liberado\": false,\n    \"razaoSocial\": \"CLIENTE TESTE\",\n    \"cpfCnpj\": \"191.823.749-29\",\n    \"msg\": \"Erro na liberação do Cliente\",\n    \"contato\": \"18999998888\",\n    \"protocolo\": \"20191014122700\",\n    \"status\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Abertura de Chamados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "{{token_chatbot}}",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						},
+						{
+							"key": "idCliente",
+							"value": "36",
+							"description": "ID do Cliente (idCliente)",
+							"type": "text"
+						},
+						{
+							"key": "contato",
+							"value": "18999998888",
+							"description": "Número de Contato",
+							"type": "text"
+						},
+						{
+							"key": "motivoos",
+							"value": "Motivo da OS",
+							"description": "Descrição do Motivo do Chamado",
+							"type": "text"
+						},
+						{
+							"key": "ocorrenciatipo",
+							"value": "2",
+							"description": "Tipo de Chamado\n1 = Manutenção\n2 = Instalação\n5 = Financeiro",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.local/api/novo/chatbot/abertura-chamado",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"local"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"abertura-chamado"
+					]
+				},
+				"description": "Criar novo Chamados."
+			},
+			"response": [
+				{
+					"name": "Abertura de Chamados",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								},
+								{
+									"key": "idCliente",
+									"value": "15678",
+									"description": "ID do Cliente (idCliente)",
+									"type": "text"
+								},
+								{
+									"key": "contato",
+									"value": "18999998888",
+									"description": "Número de Contato",
+									"type": "text"
+								},
+								{
+									"key": "motivoos",
+									"value": "Motivo da OS",
+									"description": "Descrição do Motivo do Chamado",
+									"type": "text"
+								},
+								{
+									"key": "ocorrenciatipo",
+									"value": "2",
+									"description": "Tipo de Chamado\n1 = Manutenção\n2 = Instalação\n5 = Financeiro",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/abertura-chamado",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"abertura-chamado"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:25:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "175"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"idCliente\": 15678,\n    \"idSuporte\": 662066,\n    \"razaoSocial\": \"CLIENTE TESTE\",\n    \"cpfCnpj\": \"191.823.749-29\",\n    \"contato\": \"18999998888\",\n    \"protocolo\": 20191014122534,\n    \"status\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Gravação de Chamados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "{{token_chatbot}}",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						},
+						{
+							"key": "idSuporte",
+							"value": "955268",
+							"description": "ID do Cliente (idCliente)",
+							"type": "text"
+						},
+						{
+							"key": "urlgravacao",
+							"value": "18999998888",
+							"description": "Número de Contato",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "is_finalizar",
+							"value": "1",
+							"description": "Finalizar OS",
+							"type": "text"
+						},
+						{
+							"key": "transcricao",
+							"value": "[{\n\t\"tipo\": 1,\n\t\"nome\": \"Cliente\",\n\t\"mensagem\": \"Mensagem\"\n}, {\n\t\"tipo\": 2,\n\t\"nome\": \"BOT\",\n\t\"mensagem\": \"Mensagem do BOT\"\n}]",
+							"description": "Transcrição da Conversa com o Cliente",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.local/api/novo/chatbot/chamado-gravacao",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"local"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"chamado-gravacao"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Abertura de Chamados",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								},
+								{
+									"key": "idCliente",
+									"value": "15678",
+									"description": "ID do Cliente (idCliente)",
+									"type": "text"
+								},
+								{
+									"key": "contato",
+									"value": "18999998888",
+									"description": "Número de Contato",
+									"type": "text"
+								},
+								{
+									"key": "motivoos",
+									"value": "Motivo da OS",
+									"description": "Descrição do Motivo do Chamado",
+									"type": "text"
+								},
+								{
+									"key": "ocorrenciatipo",
+									"value": "2",
+									"description": "Tipo de Chamado\n1 = Manutenção\n2 = Instalação\n5 = Financeiro",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/abertura-chamado",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"abertura-chamado"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:25:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "175"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"idCliente\": 15678,\n    \"idSuporte\": 662066,\n    \"razaoSocial\": \"CLIENTE TESTE\",\n    \"cpfCnpj\": \"191.823.749-29\",\n    \"contato\": \"18999998888\",\n    \"protocolo\": 20191014122534,\n    \"status\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Chamados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "{{token_chatbot}}",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						},
+						{
+							"key": "idCliente",
+							"value": "36",
+							"description": "ID do Cliente (idCliente)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.local/api/novo/chatbot/chamados",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"local"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"chamados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Planos de Cobranças",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "d93e1659-d843-477a-80b6-f66df61f6f80",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.net/api/novo/chatbot/planos-cobrancas",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"net"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"planos-cobrancas"
+					]
+				},
+				"description": "Lista de Cobranças Disponíveis."
+			},
+			"response": [
+				{
+					"name": "Planos de Cobranças",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/planos-cobrancas",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"planos-cobrancas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:25:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idPlano\": 1,\n        \"descricao\": \"1MB\",\n        \"valor\": 59.99\n    },\n    {\n        \"idPlano\": 2,\n        \"descricao\": \"2MB\",\n        \"valor\": 69.99\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Débitos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+							"description": "Token",
+							"type": "text"
+						},
+						{
+							"key": "app",
+							"value": "chatbot",
+							"description": "Sempre \"chatbot\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sistema.receitanet.net/api/novo/chatbot/debitos?page=1",
+					"protocol": "https",
+					"host": [
+						"sistema",
+						"receitanet",
+						"net"
+					],
+					"path": [
+						"api",
+						"novo",
+						"chatbot",
+						"debitos"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "Páginação"
+						}
+					]
+				},
+				"description": "Lista de Boletos vencidos."
+			},
+			"response": [
+				{
+					"name": "Débitos",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "72bb3421-7ad6-4da0-82ea-fd0317f1e31a",
+									"description": "Token",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "chatbot",
+									"description": "Sempre \"chatbot\"",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sistema.receitanet.net/api/novo/chatbot/debitos?page=1",
+							"protocol": "https",
+							"host": [
+								"sistema",
+								"receitanet",
+								"net"
+							],
+							"path": [
+								"api",
+								"novo",
+								"chatbot",
+								"debitos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Páginação"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 14 Oct 2019 15:25:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.17.2"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.28"
+						},
+						{
+							"key": "Content-Length",
+							"value": "209"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 8984,\n        \"nome\": \"ERIVALDO DE BRITO\",\n        \"login\": \"erivaldo\",\n        \"telefone1\": \"(96)9294-397\",\n        \"telefone2\": \"\",\n        \"telefone3\": \"\",\n        \"boletos\": [\n            {\n                \"vencimento\": \"2019-09-10\",\n                \"valor\": 50,\n                \"link\": \"https://b.receitanet.net/g8Ar\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		}
+	]
+}
